@@ -19,6 +19,7 @@ public class Car {
     }
 
     public static final Car newInstance() {
+        // 메서드에 final을 붙이면 상속받았을 때 수정을 못함
         return new Car();
     }
 }
