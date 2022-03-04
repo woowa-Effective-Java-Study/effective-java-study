@@ -49,16 +49,16 @@ public class Foo {
         HashSet<LottoNumber> lottoNumberSet = new HashSet<>(List.of(ln1, ln2, ln3));
         HashSet<Integer> integerSet = new HashSet<>(List.of(i1, i2, i3, i4));
 
-        System.out.println(m1.hashCode() == m2.hashCode());
-        System.out.println(m1.hashCode() == m3.hashCode());
-        System.out.println(ln1.hashCode() == ln2.hashCode());
-        System.out.println(ln1.hashCode() == ln3.hashCode());
-        System.out.println(i1.hashCode() == i2.hashCode());
-        System.out.println(i1.hashCode() == i3.hashCode());
-        System.out.println(i3.hashCode() == i4.hashCode());
-        System.out.println(moneySet.size());
-        System.out.println(lottoNumberSet.size());
-        System.out.println(integerSet.size());
+        System.out.println(m1.hashCode() == m2.hashCode()); // 1
+        System.out.println(m1.hashCode() == m3.hashCode()); // 2
+        System.out.println(ln1.hashCode() == ln2.hashCode()); // 3
+        System.out.println(ln1.hashCode() == ln3.hashCode()); // 4
+        System.out.println(i1.hashCode() == i2.hashCode()); // 5
+        System.out.println(i1.hashCode() == i3.hashCode()); // 6
+        System.out.println(i3.hashCode() == i4.hashCode()); // 7
+        System.out.println(moneySet.size()); // 8
+        System.out.println(lottoNumberSet.size()); // 9
+        System.out.println(integerSet.size()); // 10
     }
 }
 ```
