@@ -138,4 +138,4 @@ List<String>.class // 비허용
 List<?>.class // 비허용
 ```
 2. instanceof
-  - 런타임에는 제네릭 타입 정보가 지워지므로 instanceof 연산자 사용 시 제네릭 타입을 쓸 필요 X
+   - 런타임에는 제네릭 타입 정보가 지워지므로 instanceof 연산자 사용 시 제네릭 타입을 쓸 필요 X
