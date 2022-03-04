@@ -35,7 +35,7 @@
 - [ ] 7. 다 쓴 객체 참조를 해제하라
 - [ ] 8. finalizer와 cleaner 사용을 피하라
 - [ ] 9. try-finally보다는 try-with-resources를 사용하라
-- [ ] 10. equals는 일반 규약을 지켜 재정의하라 - `배카라`
+- [x] 10. [equals는 일반 규약을 지켜 재정의하라](seong-wooo/아이템10.md) - `배카라`
 - [x] 11. [equals를 재정의하려거든 hashCode도 재정의하라](OzRagwort/item11.md) - `알린`
 - [x] 12. [toString을 항상 재정의하라](OzRagwort/item12.md) - `알린`
 - [ ] 13. clone 재정의는 주의해서 진행하라
