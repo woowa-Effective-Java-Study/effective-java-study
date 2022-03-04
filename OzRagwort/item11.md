@@ -1,3 +1,7 @@
+# item 11. equals를 재정의하려거든 hashCode도 재정의하라
+
+---
+
 # 주제를 시작하기 전 문제
 
 아래와 같은 클래스가 있을 때
@@ -60,8 +64,6 @@ public class Foo {
 ```
 
 ---
-
-# item 11. equals를 재정의하려거든 hashCode도 재정의하라
 
 # <핵심만 쏙쏙 버전>
 
