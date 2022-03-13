@@ -101,8 +101,10 @@ public class Foo {
     public void foo() {
         List<String> stringList = List.of("1", "2", "3");
 
-        stringList.stream().map(Integer::parseInt).toArray(Integer[0]); // 이건 된다.
-        stringList.stream().map(Integer::parseInt).toArray( int[0]);     // 이건 안된다.
+        stringList.stream().map(Integer::parseInt).toArray(Integer[]::new); // 이건 된다.
+        stringList.stream().map(Integer::parseInt).toArray((size) -> new Integer[size]); // 이것도 된다.
+        stringList.stream().map(Integer::parseInt).toArray(int[]::new);     // 이건 안된다.
+        stringList.stream().mapToInt(Integer::parseInt).toArray();     // int[]로 내보내고 싶다면
     }
 }
 ```
