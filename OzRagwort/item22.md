@@ -148,7 +148,11 @@ public class Foo {
 ```
 
 ## 참고 자료
+
 [디폴트 메서드](https://samba-java.tistory.com/22)
+
 [(자바 8) 바이너리 호환성, 소스 호환성, 동작 호환성](http://clearpal7.blogspot.com/2017/03/8_56.html)
-[What is binary compatibility in Java?(https://stackoverflow.com/questions/14973380/what-is-binary-compatibility-in-java)
+
+[What is binary compatibility in Java?](https://stackoverflow.com/questions/14973380/what-is-binary-compatibility-in-java)
+
 [Java: Binary Compatibility - more than meets the eye](http://codefhtagn.blogspot.com/2010/11/java-binary-compatibility-more-than.html)
