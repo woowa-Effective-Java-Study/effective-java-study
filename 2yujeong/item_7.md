@@ -60,7 +60,7 @@ public Object pop() {
 2. 캐시
     - 캐시 엔트리의 유효 기간을 정확히 정의하기가 어렵기 때문에 메모리 누수가 발생할 수 있다.
     - 해결 방법
-      - 캐시 위부에서 키를 참조하는 동안만 엔트리가 살아있는 캐시가 필요한 경우 : WeakHashMap
+      - 캐시 외부에서 키를 참조하는 동안만 엔트리가 살아있는 캐시가 필요한 경우 : WeakHashMap
       - 주기적으로 쓰지 않는 엔트리 청소 : ScheduledThreadPoolExecutor, LinkedHashMap의 removeEldestEntry
 3. 리스너(콜백)
     - 클라이언트가 콜백을 등록만 하고 명확히 해지하지 않는 경우 콜백이 계속 쌓여서 문제가 발생한다.
@@ -69,32 +69,24 @@ public Object pop() {
 
 ### WeakHashMap
 ```java
-import java.util.Map;
-import java.util.WeakHashMap;
-
 public class WeakHashMapTest {
-
     public static void main(String[] args) {
-        Map<Integer, Stack> weakMap = new WeakHashMap<>();
-
-        Stack s1 = new Stack();
-        Stack s2 = new Stack();
-        weakMap.put(20, s1);
-        weakMap.put(450, s2);
-
-        // 정상적으로 2개 출력
-        for (Map.Entry<Integer, Stack> elem : weakMap.entrySet()) {
-            System.out.printf("%d: %s\n", elem.getKey(), elem.getValue());
-        }
-
-        // 강제 Garbage Collection
-        s2 = null;
-        System.gc();
-
-        // WeakHashMap 에서 450 키가 자동으로 사라진 것을 확인할 수 있음
-        for (Map.Entry<Integer, Stack> elem : weakMap.entrySet()) {
-            System.out.printf("%d: %s\n", elem.getKey(), elem.getValue());
-        }
+    
+        WeakHashMap<Integer, String> map = new WeakHashMap<>();
+        
+        Integer key1 = 1000;
+        Integer key2 = 2000;
+        map.put(key1, "test a");
+        map.put(key2, "test b");
+        
+        key1 = null;
+        System.gc();  //강제 Garbage Collection
+        
+        map.entrySet().stream().forEach(el -> System.out.println(el));
     }
 }
 ```
+<br>
+
+#### 참고 사이트
+- https://blog.breakingthat.com/2018/08/26/java-collection-map-weakhashmap/
