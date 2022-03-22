@@ -32,13 +32,13 @@
 - [X] 4. [인스턴스화를 막으려거든 private 생성자를 사용하라](2yujeong/item_4.md) - `이브`
 - [X] 5. [자원을 직접 명시하지 말고 의존 객체 주입을 사용하라](seong-wooo/아이템5.md) - `배카라`
 - [X] 6. [불필요한 객체 생성을 피하라](seong-wooo/아이템6.md) - `배카라`
-- [ ] 7. 다 쓴 객체 참조를 해제하라 - `이브`
-- [ ] 8. finalizer와 cleaner 사용을 피하라 - `배카라`
+- [x] 7. [다 쓴 객체 참조를 해제하라](2yujeong/item_7.md) - `이브`
+- [x] 8. [finalizer와 cleaner 사용을 피하라](seong-wooo/아이템8.md) - `배카라`
 - [x] 9. [try-finally보다는 try-with-resources를 사용하라](OzRagwort/item09.md) - `알린`
 - [x] 10. [equals는 일반 규약을 지켜 재정의하라](seong-wooo/아이템10.md) - `배카라`
 - [x] 11. [equals를 재정의하려거든 hashCode도 재정의하라](OzRagwort/item11.md) - `알린`
 - [x] 12. [toString을 항상 재정의하라](OzRagwort/item12.md) - `알린`
-- [ ] 13. clone 재정의는 주의해서 진행하라 - `알렉스`
+- [x] 13. [clone 재정의는 주의해서 진행하라](yxxnghwan/아이템13.md) - `알렉스`
 - [ ] 14. Comparable을 구현할지 고려하라
 - [ ] 15. 클래스와 멤버의 접근 권한을 최소화하라
 - [ ] 16. public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라
