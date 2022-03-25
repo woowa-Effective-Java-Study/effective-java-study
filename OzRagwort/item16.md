@@ -125,6 +125,6 @@ public class MathGrades {
 
 ## 요약
 
-public 클래스는 가변 필드를 public으로 노출하지 말자
--> 불변 필드라고 노출시켜도 되는건 아니다
-private, package-private 클래스인 경우 노출하는 편이 나을 때도 있다고 하지만 가능하면 쓰지말자
+- public 클래스는 가변 필드를 public으로 노출하지 말자
+- -> 불변 필드라고 노출시켜도 되는건 아니다
+- private, package-private 클래스인 경우 노출하는 편이 나을 때도 있다고 하지만 가능하면 쓰지말자
