@@ -14,7 +14,7 @@ public static Set union(Set s1, Set s2) {
 #### 제네릭 메소드를 적용한 코드
 ```java
 public static <E> Set<E> union(Set<E> s1, Set<E> s2) {
-  Set<E> result = new HashSet<>(s1); // raw type
+  Set<E> result = new HashSet<>(s1);
   result.addAll(s2);
   return result;
 }
